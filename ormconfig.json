@@ -1,5 +1,0 @@
-{
-  "type": "sqlite",
-  "database": "app_type_orm.db",
-  "synchronize": true
-}
