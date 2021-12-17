@@ -1,0 +1,19 @@
+GET http://localhost:3000/user
+
+###
+POST http://localhost:3000/user
+Content-Type: application/json
+
+{
+    "firstName": "daniel",
+    "lastName": "tavares"
+}
+
+###
+PATCH  http://localhost:3000/user/1000
+Content-Type: application/json
+
+{
+    "firstName": "Daniel",
+    "lastName": "Tavares"
+}
