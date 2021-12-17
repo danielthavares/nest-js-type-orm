@@ -7,22 +7,21 @@ import { User } from './entities/user.entity';
 
 @Injectable()
 export class UserService {
-
   constructor(
     @InjectRepository(User)
     private userRepository: Repository<User>,
-  ){}
+  ) {}
 
   async create(createUserDto: CreateUserDto) {
     return await this.userRepository.save(createUserDto);
   }
 
-  findAll() {
-    return this.userRepository.find();
+  async findAll() {
+    return await this.userRepository.find();
   }
 
-  findOne(id: number) {
-    return this.userRepository.findOne(id);
+  async findOne(id: number) {
+    return await this.userRepository.findOne(id);
   }
 
   async update(id: number, updateUserDto: UpdateUserDto) {

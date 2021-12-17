@@ -7,21 +7,15 @@ import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
-    /*TypeOrmModule.forRoot({
-      type: 'sqlite',
-      database:  'app.db',
-      entities:[User],
-      synchronize: true, 
-    }),*/
     TypeOrmModule.forRootAsync({
       useFactory: async () =>
         Object.assign(await getConnectionOptions(), {
           autoLoadEntities: true,
         }),
     }),
-    UserModule
+    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule { }
+export class AppModule {}

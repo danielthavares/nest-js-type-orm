@@ -5,15 +5,18 @@ POST http://localhost:3000/user
 Content-Type: application/json
 
 {
-    "firstName": "daniel",
-    "lastName": "tavares"
+    "firstName": "davi",
+    "lastName": "tavares",
+    "email": "davi.teste@email.com"
 }
 
 ###
-PATCH  http://localhost:3000/user/1000
+PATCH  http://localhost:3000/user/2
 Content-Type: application/json
 
 {
-    "firstName": "Daniel",
-    "lastName": "Tavares"
+    "lastName": "Lima"
 }
+
+###
+DELETE   http://localhost:3000/user/2
